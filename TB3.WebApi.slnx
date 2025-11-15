@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="TB3.Database/TB3.Database.csproj" />
+  <Project Path="TB3.WebApi/TB3.WebApi.csproj" />
+</Solution>
