@@ -126,4 +126,16 @@ public class HttpClientService
         string message = await response.Content.ReadAsStringAsync();
         Console.WriteLine(message);
     }
+
+    public async Task Delete()
+    {
+        Console.Write("Please enter product id: ");
+        int productId = Convert.ToInt32(Console.ReadLine());
+
+        HttpClient client = new HttpClient();
+        var response = await client.DeleteAsync($"{_baseUrl}/api/Product/{productId}");
+        
+        string message = await response.Content.ReadAsStringAsync();
+        Console.WriteLine(message);
+    }
 }
