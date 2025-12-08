@@ -35,7 +35,7 @@ public class ProductController : ControllerBase
     [HttpGet("{id}")]
     public IActionResult GetProduct(int id)
     {
-        var result = _productService.GetProdcutById(id);
+        var result = _productService.GetProductById(id);
         if(!result.IsSuccess)
             return NotFound(result);
 
@@ -46,7 +46,6 @@ public class ProductController : ControllerBase
     public IActionResult CreateProduct(ProductCreateRequestDto request)
     {
         var result = _productService.CreateProduct(request);
-
         if (!result.IsSuccess)
             return BadRequest(result);
 
@@ -56,8 +55,17 @@ public class ProductController : ControllerBase
     [HttpPut("{id}")]
     public IActionResult UpdateProduct(int id, ProductUpdateRequestDto request)
     {
-        var result = _productService.Update(id, request);
+        var result = _productService.UpdateProduct(id, request);
+        if (!result.IsSuccess)
+            return BadRequest(result);
 
+        return Ok(result);
+    }
+
+    [HttpPatch("{id}")]
+    public IActionResult PatchProduct(int id, ProductPatchRequestDto request)
+    {
+        var result = _productService.PatchProduct(id, request);
         if (!result.IsSuccess)
             return BadRequest(result);
 
