@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿/*using Microsoft.AspNetCore.Mvc;
 using TB3.Database.AppDbContextModels;
 
 namespace TB3.WebApi.Controllers;
@@ -138,4 +138,4 @@ public class ProductCategoryGetResponseDto
 {
     public string? ProductCategoryCode { get; set; }
     public string? ProductCategoryName { get; set; }
-}
+}*/

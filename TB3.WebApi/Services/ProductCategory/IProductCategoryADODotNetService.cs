@@ -1,4 +1,4 @@
-using TB3.WebApi.Controllers;
+using TB3.WebApi.Controllers.ProductCategory;
 
 namespace TB3.WebApi.Services;
 

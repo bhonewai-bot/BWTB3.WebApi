@@ -16,9 +16,9 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IProductAdoDotNetService, ProductAdoDotNetService>();
 builder.Services.AddScoped<IProductDapperService, ProductDapperService>();
 builder.Services.AddScoped<IProductService, ProductService>();
-builder.Services.AddScoped<IProductCategoryADODotNetService, ProductCategoryADODotService>();
 
 // Product Category Services
+builder.Services.AddScoped<IProductCategoryADODotNetService, ProductCategoryADODotService>();
 builder.Services.AddScoped<IProductCategoryDapperService, ProductCategoryDapperService>();
 builder.Services.AddScoped<IProductCategoryService, ProductCategoryService>();
 
